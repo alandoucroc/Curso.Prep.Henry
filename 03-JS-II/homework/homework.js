@@ -31,12 +31,13 @@ function conection(status) {
   //De lo contrario, presumimos que el usuario está "Offline"
   //Devolver el estado de conexión de usuario en cada uno de los casos.
   if (status === 1) {
-  return "Online"
-  } else if (status = 2) {
+   return "Online"
+ }
+  else if (status === 2) {
     return "Away"
   } else {
     return "Offline"
-}
+ }
   }
 
 function saludo(idioma) {
@@ -48,14 +49,15 @@ function saludo(idioma) {
   // Tu código:
   if (idioma === "aleman") {
     return "Guten Tag!"
-  } else if (idioma === "Mandarin") {
+  }
+  else if (idioma === "mandarin") {
     return "Ni Hao!"
-  } else if (idioma === "ingles") {
+  }
+  else if (idioma === "ingles") {
     return "Hello!"
   } else {
     return "Hola!"
   }
-    
 }
 
 function colors(color) {
@@ -184,7 +186,7 @@ function esPrimo(numero) {
     return true
   }
   
-  for (let i = 2; i > numero; i++){
+  for (let i = 2; i < numero; i++){
     if (numero % i === 0) {
       return false
     }
@@ -208,11 +210,11 @@ function tablaDelSeis() {
   //Escribe una función que muestre la tabla de multiplicar del 6 (del 0 al 60).
   //La función devuelve un array con los resultados de la tabla de multiplicar del 6 en orden creciente.
   //Escribe tu código aquí
-  let tabla = []
-  for (let i = 1; i < 11; i++){
-   tabla.push(6 * i)
+  let tablaNew = []
+  for (var i = 0; i < 11; i++){
+    tablaNew.push(6*i)
   }
-  return tabla
+  return tablaNew
 }
 
 function tieneTresDigitos(numero){
@@ -231,14 +233,14 @@ function doWhile(numero) {
   //Implementar una función tal que vaya aumentando el valor recibido en 5 hasta un límite de 8 veces
   //Retornar el valor final.
   //Usar el bucle do ... while.
-  var contador = 8; 
-  var resultado = 0; 
+  var a = numero;
+  var i = 0;
   do {
-    resultado += 5;
-    contador += 1;
-  } while (contador !== 0) {
-    return numero + resultado; 
-    }
+    i = i + 1;
+    a = a + 5;
+  }
+  while (i < 8);
+  return a;
 
       
 }
